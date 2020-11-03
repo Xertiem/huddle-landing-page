@@ -2,7 +2,7 @@ body {
   background-color: hsl(257, 40%, 49%);
   background-image: url(../images/bg-desktop.svg);
   background-repeat: no-repeat;
-  background-size: 1440px auto;
+  background-size: 1440 900;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -13,16 +13,21 @@ h1 {
   padding-top: 50px;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .top-container {
   margin: 30px 60px 110px;
   position: relative;
 }
 
 .mid-container {
-  width: 90%;
-  margin: 80px auto;
-  text-align: left;
   line-height: 2;
+  margin: 80px auto;
+  padding-bottom: 100px;
+  text-align: left;
+  width: 90%;
 }
 
 .mock-up {
@@ -30,6 +35,7 @@ h1 {
   margin-right: 70px;
   width: 55%;
 }
+
 
 .btn {
   -webkit-border-radius: 100px;
@@ -42,7 +48,7 @@ h1 {
   width: 220px;
   font-size: 20px;
   font-weight: 400;
-  padding: 40px;
+  padding: 30px;
   border-style-hover: solid;
   border-width-hover: 0;
   background-color: #FFFFFF;
@@ -64,24 +70,73 @@ h1 {
   text-decoration: none;
 }
 
-.bottom-container {
+footer {
+
   text-align: right;
-  margin-right: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.social{
+.social {
   display: inline-block;
+  margin-right: 80px;
   width: 30px;
-  padding: 0 10px;
 }
 
-.attribution {
-  text-align: center;
-}
 
-@media only screen and (max-width: 375px) {
-  h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+@media only screen
+and (max-device-width: 375px)
+and (orientation: portrait) {
+  body {
+    background-image: url(../images/bg-mobile.svg);
   }
+  .top-container{
+    margin:40px 15px 0;
+  }
+
+  .mid-container{
+    margin: 40px auto 40px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 10px 0;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .description{
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+
+  .mock-up {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn {
+    width: 160px;
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    position: static;
+  }
+
+  .social {
+    display: inline-block;
+    margin: auto;
+    padding: 0 10px;
+  }
+
+
 }
